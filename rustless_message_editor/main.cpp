@@ -44,12 +44,13 @@ struct Message {
     int timeToRespond = 20;
     Response responce[2];
     Relationship relationship = NEUTERAL;
+    int32_t ID = 0;
 };
 
 struct Character {
     std::string name = "";
     std::vector<Message> messages;
-    std::vector<std::string> dummyMessages = {};
+    //std::vector<std::string> dummyMessages = {};
 };
 
 // Forward declarations of helper functions
@@ -88,8 +89,8 @@ int main(int, char**)
     ::UpdateWindow(hwnd);
 
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
-    std::ifstream f("Content/Data/messages.json");
-    //std::ifstream f("test.json");
+    //std::ifstream f("Content/Data/messages.json");
+    std::ifstream f("load.json");
     json data;
     if (f.good()) {
         data = json::parse(f);
@@ -127,6 +128,13 @@ int main(int, char**)
         }
         else {
             newMessage.relationship = messages["relationship"];
+        }
+
+        if (messages["ID"].is_null()) {
+            newMessage.ID = 0;
+        }
+        else {
+            newMessage.ID = messages["ID"];
         }
 
         int responseTrack = 0;
@@ -170,23 +178,23 @@ int main(int, char**)
 
     //std::cout << "Dummy Messages\n";
 
-    for (auto& dMessages : data["dummyMessages"]) {
-        
-        int charLoc = DoesCharacterExist(characters, dMessages["from"]);
-        
-        if (charLoc == -1) {
-            //no exists
-            Character newCharacter;
-            newCharacter.name = dMessages["from"];
-            newCharacter.dummyMessages.push_back(dMessages["content"]);
-            characters.push_back(newCharacter);
-            treeNames.push_back(newCharacter.name);
-        }
-        else {
-            //yes exists
-            characters[charLoc].dummyMessages.push_back(dMessages["content"]);
-        }
-    }
+    //for (auto& dMessages : data["dummyMessages"]) {
+    //    
+    //    int charLoc = DoesCharacterExist(characters, dMessages["from"]);
+    //    
+    //    if (charLoc == -1) {
+    //        //no exists
+    //        Character newCharacter;
+    //        newCharacter.name = dMessages["from"];
+    //        newCharacter.dummyMessages.push_back(dMessages["content"]);
+    //        characters.push_back(newCharacter);
+    //        treeNames.push_back(newCharacter.name);
+    //    }
+    //    else {
+    //        //yes exists
+    //        characters[charLoc].dummyMessages.push_back(dMessages["content"]);
+    //    }
+    //}
 
     bool done = false;
     while (!done) {
@@ -247,33 +255,38 @@ int main(int, char**)
             static float f = 0.0f;
             static int counter = 0;
 
-            ImGui::Begin("Message Editor", nullptr, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse);                          // Create a window called "Hello, world!" and append into it.
-            
+            ImGui::Begin("Message Editor", nullptr, 
+                ImGuiWindowFlags_NoResize | 
+                ImGuiWindowFlags_NoMove | 
+                ImGuiWindowFlags_NoCollapse | 
+                ImGuiWindowFlags_NoTitleBar | 
+                ImGuiWindowFlags_MenuBar);
+
             float windowWidth = ImGui::GetWindowWidth();
             ImGui::PushItemWidth(windowWidth - 200);
 
-            if (ImGui::Button("Save") || (ImGui::GetIO().KeyCtrl && ImGui::IsKeyPressed(ImGuiKey_S)))
-            {
-                std::cout << "\033[32m" << "saved!\n";
-                Save(characters);
-            }
-            ImGui::SameLine();
-            if (ImGui::Button("New Character")) {
-                Character newCharacter;
-                newCharacter.name = "New character";
-                characters.push_back(newCharacter);
-                treeNames.push_back(newCharacter.name);
-            }
-            ImGui::SameLine();
-            if (ImGui::Button("Update tree names"))
-            {
-                for (int i = 0; i < characters.size(); i++) {
-                    treeNames[i] = characters[i].name;
+            if (ImGui::BeginMenuBar()) {
+                
+                if (ImGui::Button("Save") || (ImGui::GetIO().KeyCtrl && ImGui::IsKeyPressed(ImGuiKey_S)))
+                {
+                    std::cout << "\033[32m" << "saved!\n";
+                    Save(characters);
                 }
-            }
+                if (ImGui::Button("New Character")) {
+                    Character newCharacter;
+                    newCharacter.name = "New character";
+                    characters.push_back(newCharacter);
+                    treeNames.push_back(newCharacter.name);
+                }
+                if (ImGui::Button("Update tree names"))
+                {
+                    for (int i = 0; i < characters.size(); i++) {
+                        treeNames[i] = characters[i].name;
+                    }
+                }
 
-            //ImGui::Text("This is some useful text."); 
-            //ImGui::Text(data);
+                ImGui::EndMenuBar();
+            }
 
             for (int i = 0; i < characters.size(); i++) {
 
@@ -334,6 +347,12 @@ int main(int, char**)
                                     std::cout << "\033[31m" << "Relationship Enum failed cast, num is " << badNum << ". Number shoud be 1 - 3, check it is in json" << "\033[0m" << "\n";
                                 }
                             }
+
+                            int MessageID = characters[i].messages[j].ID;
+                            if (ImGui::InputInt("ID", &MessageID)) {
+                                characters[i].messages[j].ID = MessageID;
+                            }
+
                             ImGui::PopID();
 
                             char responceReply1[3000] = { 0 };
@@ -389,34 +408,34 @@ int main(int, char**)
                         ImGui::TreePop();
                     }
 
-                    if (ImGui::TreeNode("Dummy messages")) {
+                    //if (ImGui::TreeNode("Dummy messages")) {
 
-                        if (ImGui::Button("New Message")) {
-                            std::string newDMessage;
-                            characters[i].dummyMessages.push_back(newDMessage);
-                        }
+                    //    if (ImGui::Button("New Message")) {
+                    //        std::string newDMessage;
+                    //        characters[i].dummyMessages.push_back(newDMessage);
+                    //    }
 
-                        if (!characters[i].dummyMessages.empty()) {
-                            for (int j = 0; j < characters[i].dummyMessages.size(); j++) {
-                                char dummyContent[3000] = { 0 };
-                                strncpy_s(dummyContent, characters[i].dummyMessages[j].c_str(), sizeof(dummyContent));
+                    //    if (!characters[i].dummyMessages.empty()) {
+                    //        for (int j = 0; j < characters[i].dummyMessages.size(); j++) {
+                    //            char dummyContent[3000] = { 0 };
+                    //            strncpy_s(dummyContent, characters[i].dummyMessages[j].c_str(), sizeof(dummyContent));
 
-                                ImGui::PushID(j);
-                                if (ImGui::InputText("Content", dummyContent, IM_ARRAYSIZE(dummyContent))) {
-                                    characters[i].dummyMessages[j] = dummyContent;
-                                }
+                    //            ImGui::PushID(j);
+                    //            if (ImGui::InputText("Content", dummyContent, IM_ARRAYSIZE(dummyContent))) {
+                    //                characters[i].dummyMessages[j] = dummyContent;
+                    //            }
 
-                                if (ImGui::Button("Delete Message")) {
-                                    characters[i].dummyMessages.erase(characters[i].dummyMessages.begin() + j);
-                                }
-                                ImGui::Dummy(ImVec2(0.0f, 5.0f));
+                    //            if (ImGui::Button("Delete Message")) {
+                    //                characters[i].dummyMessages.erase(characters[i].dummyMessages.begin() + j);
+                    //            }
+                    //            ImGui::Dummy(ImVec2(0.0f, 5.0f));
 
-                                ImGui::PopID();
-                            }
-                        }
+                    //            ImGui::PopID();
+                    //        }
+                    //    }
 
-                        ImGui::TreePop();
-                    }
+                    //    ImGui::TreePop();
+                    //}
 
 
                     if (ImGui::Button("Delete Character")) {
@@ -548,7 +567,7 @@ void Save(std::vector<Character> characters) {
             jMessage["content"] = charMessage.content;
             jMessage["timeToRespond"] = charMessage.timeToRespond;
             jMessage["relationship"] = charMessage.relationship;
-
+            jMessage["ID"] = charMessage.ID;
             json jResponse[2];
             for (int i = 0; i < 2; i++) {
                 jResponse[i]["reply"] = charMessage.responce[i].reply;
@@ -566,15 +585,16 @@ void Save(std::vector<Character> characters) {
         //jMessage.clear();
     }
 
-    for (auto& character : characters) {
-        json jDMessage;
-        for (auto& charDMessage : character.dummyMessages) {
-            jDMessage["from"] = character.name;
-            jDMessage["content"] = charDMessage;
-            saveFile["dummyMessages"].push_back(jDMessage);
-            jDMessage.clear();
-        }
-    }
+    //dummy
+    //for (auto& character : characters) {
+    //    json jDMessage;
+    //    for (auto& charDMessage : character.dummyMessages) {
+    //        jDMessage["from"] = character.name;
+    //        jDMessage["content"] = charDMessage;
+    //        saveFile["dummyMessages"].push_back(jDMessage);
+    //        jDMessage.clear();
+    //    }
+    //}
 
     std::ofstream file("Content/Data/messages.json");
     if (file.is_open()) {

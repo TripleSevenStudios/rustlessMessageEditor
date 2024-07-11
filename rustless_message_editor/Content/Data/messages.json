@@ -1,48 +1,7 @@
 {
-    "dummyMessages": [
-        {
-            "content": "I've stolen thy lady’s phone, get baited",
-            "from": "Princess"
-        },
-        {
-            "content": "There’s a hidden door there btw….. Ha got thou",
-            "from": "Princess"
-        },
-        {
-            "content": "You know the Squishies feel pain to an almost 3X greater extent than humans, this is unethical.",
-            "from": "Princess"
-        },
-        {
-            "content": "We need to talk… HA I got you just for a sec",
-            "from": "Princess"
-        },
-        {
-            "content": "Your \"Witch-Slayer Greatsword\" is ready to be shipped. Estimated delivery tomorrow",
-            "from": "Blacksmiths R'Us"
-        },
-        {
-            "content": "Princess updated status to \"Kidnapped\" again",
-            "from": "Facetome"
-        },
-        {
-            "content": "GreatKnightKarrius started a LIVE",
-            "from": "DINGDONG"
-        },
-        {
-            "content": "Daily_Knight_Affirmations posted a story",
-            "from": "Instaportrait"
-        },
-        {
-            "content": "Time to Be Realeth",
-            "from": "BeRealeth"
-        },
-        {
-            "content": "Swordmaster Catherine has uploaded a video: Witch-Slayer Greatsword unboxing: I was scammed?!?!",
-            "from": "ThouTube"
-        }
-    ],
     "messages": [
         {
+            "ID": 0,
             "content": "HTTPS:FaceTome/RelateableSerfMemes/fhjay65746r.co.kingdom Thought thine would find this humorous",
             "from": "King",
             "relationship": 1,
@@ -61,6 +20,7 @@
             "timeToRespond": 20
         },
         {
+            "ID": 100,
             "content": "Mine jester hath caught the plague i need thou to cover the shift",
             "from": "King",
             "relationship": 1,
@@ -79,6 +39,7 @@
             "timeToRespond": 20
         },
         {
+            "ID": 200,
             "content": "Help me, My phone says that there are single maidens in my area, and I can’t get it to stop. The Queen cannot catch wind of this",
             "from": "King",
             "relationship": 2,
@@ -97,6 +58,7 @@
             "timeToRespond": 20
         },
         {
+            "ID": 300,
             "content": "I beg of thee kill the witch as fast as you can, and bring her body to the capital.",
             "from": "King",
             "relationship": 1,
@@ -115,6 +77,7 @@
             "timeToRespond": 20
         },
         {
+            "ID": 400,
             "content": "Your performance review is coming up, I hope you will improve that attitude of yours in that time.",
             "from": "King",
             "relationship": 1,
@@ -133,6 +96,7 @@
             "timeToRespond": 20
         },
         {
+            "ID": 500,
             "content": "Yipee! How to run kingdom without making peasants mad",
             "from": "King",
             "relationship": 0,
@@ -151,6 +115,7 @@
             "timeToRespond": 20
         },
         {
+            "ID": 600,
             "content": "My daughter ist not reply to my messages, doth she reply to thou’s?",
             "from": "King",
             "relationship": 1,
@@ -169,6 +134,7 @@
             "timeToRespond": 20
         },
         {
+            "ID": 700,
             "content": "Art thou able to acquire me a coffee on thine’s way pls",
             "from": "Princess",
             "relationship": 1,
@@ -187,6 +153,7 @@
             "timeToRespond": 20
         },
         {
+            "ID": 800,
             "content": "My Knight there is a rat in my quarters can thou kill it pls",
             "from": "Princess",
             "relationship": 1,
@@ -205,6 +172,7 @@
             "timeToRespond": 20
         },
         {
+            "ID": 900,
             "content": "Would thou still save me if i were a Wyrm?",
             "from": "Princess",
             "relationship": 1,
@@ -223,6 +191,7 @@
             "timeToRespond": 20
         },
         {
+            "ID": 1000,
             "content": "My knight doth thou prefer Unicorns or Pegasi?",
             "from": "Princess",
             "relationship": 1,
@@ -241,6 +210,7 @@
             "timeToRespond": 20
         },
         {
+            "ID": 1100,
             "content": "Is that a Squishy?! My Knight acquire his autograph!",
             "from": "Princess",
             "relationship": 1,
@@ -259,6 +229,7 @@
             "timeToRespond": 20
         },
         {
+            "ID": 1200,
             "content": "Is this DINGDONG dance good to post Attached video",
             "from": "Princess",
             "relationship": 1,
@@ -277,6 +248,7 @@
             "timeToRespond": 20
         },
         {
+            "ID": 1300,
             "content": "Hast thou made any progress since last we spoke?",
             "from": "Princess",
             "relationship": 1,
@@ -295,6 +267,7 @@
             "timeToRespond": 20
         },
         {
+            "ID": 1400,
             "content": "What tis thous sign of star?",
             "from": "Princess",
             "relationship": 1,
@@ -313,6 +286,7 @@
             "timeToRespond": 20
         },
         {
+            "ID": 1500,
             "content": "Didst thou bring me a change of clothes?",
             "from": "Princess",
             "relationship": 1,
@@ -331,6 +305,7 @@
             "timeToRespond": 20
         },
         {
+            "ID": 1600,
             "content": "Hast thou gotten injured while fighting for me?",
             "from": "Princess",
             "relationship": 1,
