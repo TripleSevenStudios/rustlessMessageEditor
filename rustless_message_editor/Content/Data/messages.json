@@ -1,0 +1,352 @@
+{
+    "dummyMessages": [
+        {
+            "content": "I've stolen thy lady’s phone, get baited",
+            "from": "Princess"
+        },
+        {
+            "content": "There’s a hidden door there btw….. Ha got thou",
+            "from": "Princess"
+        },
+        {
+            "content": "You know the Squishies feel pain to an almost 3X greater extent than humans, this is unethical.",
+            "from": "Princess"
+        },
+        {
+            "content": "We need to talk… HA I got you just for a sec",
+            "from": "Princess"
+        },
+        {
+            "content": "Your \"Witch-Slayer Greatsword\" is ready to be shipped. Estimated delivery tomorrow",
+            "from": "Blacksmiths R'Us"
+        },
+        {
+            "content": "Princess updated status to \"Kidnapped\" again",
+            "from": "Facetome"
+        },
+        {
+            "content": "GreatKnightKarrius started a LIVE",
+            "from": "DINGDONG"
+        },
+        {
+            "content": "Daily_Knight_Affirmations posted a story",
+            "from": "Instaportrait"
+        },
+        {
+            "content": "Time to Be Realeth",
+            "from": "BeRealeth"
+        },
+        {
+            "content": "Swordmaster Catherine has uploaded a video: Witch-Slayer Greatsword unboxing: I was scammed?!?!",
+            "from": "ThouTube"
+        }
+    ],
+    "messages": [
+        {
+            "content": "HTTPS:FaceTome/RelateableSerfMemes/fhjay65746r.co.kingdom Thought thine would find this humorous",
+            "from": "King",
+            "relationship": 1,
+            "responses": [
+                {
+                    "content": "Is thine’s majesty calling me a serf?",
+                    "health": 0,
+                    "reply": ""
+                },
+                {
+                    "content": "Lmao",
+                    "health": 25,
+                    "reply": "I know right lmao"
+                }
+            ],
+            "timeToRespond": 20
+        },
+        {
+            "content": "Mine jester hath caught the plague i need thou to cover the shift",
+            "from": "King",
+            "relationship": 1,
+            "responses": [
+                {
+                    "content": "I am still saving thine’s daughter",
+                    "health": 25,
+                    "reply": ""
+                },
+                {
+                    "content": "Thine cannot be fr",
+                    "health": 0,
+                    "reply": ""
+                }
+            ],
+            "timeToRespond": 20
+        },
+        {
+            "content": "Help me, My phone says that there are single maidens in my area, and I can’t get it to stop. The Queen cannot catch wind of this",
+            "from": "King",
+            "relationship": 2,
+            "responses": [
+                {
+                    "content": "Skill issue",
+                    "health": 0,
+                    "reply": ""
+                },
+                {
+                    "content": "Click the x in the top right your highness",
+                    "health": 25,
+                    "reply": ""
+                }
+            ],
+            "timeToRespond": 20
+        },
+        {
+            "content": "I beg of thee kill the witch as fast as you can, and bring her body to the capital.",
+            "from": "King",
+            "relationship": 1,
+            "responses": [
+                {
+                    "content": "I thought this was about your daughter?",
+                    "health": 0,
+                    "reply": ""
+                },
+                {
+                    "content": "Yes my liege",
+                    "health": 25,
+                    "reply": ""
+                }
+            ],
+            "timeToRespond": 20
+        },
+        {
+            "content": "Your performance review is coming up, I hope you will improve that attitude of yours in that time.",
+            "from": "King",
+            "relationship": 1,
+            "responses": [
+                {
+                    "content": "Ofc your Highness",
+                    "health": 25,
+                    "reply": ""
+                },
+                {
+                    "content": "Maybe if you were a better boss I wouldn't have an attitude",
+                    "health": 0,
+                    "reply": ""
+                }
+            ],
+            "timeToRespond": 20
+        },
+        {
+            "content": "Yipee! How to run kingdom without making peasants mad",
+            "from": "King",
+            "relationship": 0,
+            "responses": [
+                {
+                    "content": "This isn’t google your highness",
+                    "health": 0,
+                    "reply": ""
+                },
+                {
+                    "content": "Pay peasants livable wages",
+                    "health": 25,
+                    "reply": ""
+                }
+            ],
+            "timeToRespond": 20
+        },
+        {
+            "content": "My daughter ist not reply to my messages, doth she reply to thou’s?",
+            "from": "King",
+            "relationship": 1,
+            "responses": [
+                {
+                    "content": "Yeah every time",
+                    "health": 0,
+                    "reply": ""
+                },
+                {
+                    "content": "No not at all, but don’t worry I will save her soon",
+                    "health": 25,
+                    "reply": ""
+                }
+            ],
+            "timeToRespond": 20
+        },
+        {
+            "content": "Art thou able to acquire me a coffee on thine’s way pls",
+            "from": "Princess",
+            "relationship": 1,
+            "responses": [
+                {
+                    "content": "Art thou fr",
+                    "health": 0,
+                    "reply": ""
+                },
+                {
+                    "content": "Fs my lady",
+                    "health": 25,
+                    "reply": ""
+                }
+            ],
+            "timeToRespond": 20
+        },
+        {
+            "content": "My Knight there is a rat in my quarters can thou kill it pls",
+            "from": "Princess",
+            "relationship": 1,
+            "responses": [
+                {
+                    "content": "Befriend it my lady",
+                    "health": 25,
+                    "reply": ""
+                },
+                {
+                    "content": "Im busy rn, kill it thouself",
+                    "health": 0,
+                    "reply": ""
+                }
+            ],
+            "timeToRespond": 20
+        },
+        {
+            "content": "Would thou still save me if i were a Wyrm?",
+            "from": "Princess",
+            "relationship": 1,
+            "responses": [
+                {
+                    "content": "Dost thou jest?",
+                    "health": 0,
+                    "reply": ""
+                },
+                {
+                    "content": "What kind of Wyrm?",
+                    "health": 25,
+                    "reply": ""
+                }
+            ],
+            "timeToRespond": 20
+        },
+        {
+            "content": "My knight doth thou prefer Unicorns or Pegasi?",
+            "from": "Princess",
+            "relationship": 1,
+            "responses": [
+                {
+                    "content": "Isn’t it Pegasuses?",
+                    "health": 0,
+                    "reply": ""
+                },
+                {
+                    "content": "Pegasi fs",
+                    "health": 25,
+                    "reply": ""
+                }
+            ],
+            "timeToRespond": 20
+        },
+        {
+            "content": "Is that a Squishy?! My Knight acquire his autograph!",
+            "from": "Princess",
+            "relationship": 1,
+            "responses": [
+                {
+                    "content": "He’s trying to kill me, my lady!",
+                    "health": 0,
+                    "reply": ""
+                },
+                {
+                    "content": "I’ll try",
+                    "health": 25,
+                    "reply": ""
+                }
+            ],
+            "timeToRespond": 20
+        },
+        {
+            "content": "Is this DINGDONG dance good to post Attached video",
+            "from": "Princess",
+            "relationship": 1,
+            "responses": [
+                {
+                    "content": "Looks great!",
+                    "health": 25,
+                    "reply": ""
+                },
+                {
+                    "content": "Thy needs more practice",
+                    "health": 0,
+                    "reply": ""
+                }
+            ],
+            "timeToRespond": 20
+        },
+        {
+            "content": "Hast thou made any progress since last we spoke?",
+            "from": "Princess",
+            "relationship": 1,
+            "responses": [
+                {
+                    "content": "I hath killed a multitude of enemies",
+                    "health": 25,
+                    "reply": ""
+                },
+                {
+                    "content": "I'm working on it my lady",
+                    "health": 0,
+                    "reply": ""
+                }
+            ],
+            "timeToRespond": 20
+        },
+        {
+            "content": "What tis thous sign of star?",
+            "from": "Princess",
+            "relationship": 1,
+            "responses": [
+                {
+                    "content": "Virgo...",
+                    "health": 0,
+                    "reply": ""
+                },
+                {
+                    "content": "Gemini, obviously.",
+                    "health": 25,
+                    "reply": ""
+                }
+            ],
+            "timeToRespond": 20
+        },
+        {
+            "content": "Didst thou bring me a change of clothes?",
+            "from": "Princess",
+            "relationship": 1,
+            "responses": [
+                {
+                    "content": "Ofc I did",
+                    "health": 25,
+                    "reply": ""
+                },
+                {
+                    "content": "I forgot, sorry",
+                    "health": 0,
+                    "reply": ""
+                }
+            ],
+            "timeToRespond": 20
+        },
+        {
+            "content": "Hast thou gotten injured while fighting for me?",
+            "from": "Princess",
+            "relationship": 1,
+            "responses": [
+                {
+                    "content": "Yes, tis’ but a flesh wound, my lady",
+                    "health": 25,
+                    "reply": ""
+                },
+                {
+                    "content": "I’m dying rn",
+                    "health": 0,
+                    "reply": ""
+                }
+            ],
+            "timeToRespond": 20
+        }
+    ]
+}
